@@ -8,12 +8,11 @@ pandas = "*"
 numpy = "*"
 matplotlib = "*"
 seaborn = "*"
-ipykernel = "*"
 black = "*"
 scikit-learn = "*"
-tensorflow = "*"
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
 python_version = "3.9"
