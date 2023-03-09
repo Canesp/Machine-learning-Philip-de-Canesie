@@ -11,6 +11,8 @@ seaborn = "*"
 black = "*"
 scikit-learn = "*"
 fuzzywuzzy = "*"
+plotly = "*"
+nbformat = "*"
 
 [dev-packages]
 ipykernel = "*"
