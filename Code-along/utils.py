@@ -1,8 +1,11 @@
 from sklearn.datasets import make_blobs
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib import cm
-from sklearn import svm
+
+
+
+def print_shapes(X_train, X_test, y_train, y_test):
+    print(f"{X_train.shape = }\n{X_test.shape = }\n{y_train.shape = }\n{y_test.shape = }\n" ) 
 
 
 def train_test_split(X, y, train_fraction=.7, seed=42, replace=False):
