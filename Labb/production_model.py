@@ -14,10 +14,12 @@ model = joblib.load(model_path)
 X_test, y_test = test_samples.drop(columns="cardio", axis= 1), test_samples["cardio"]
 # predict on test samples 
 y_pred = model.predict(X_test)
+# gets prob for prediction.
+y_prob = model.predict_proba(X_test)
 
 # creates a dataframe with prediction and probability class.
-d = {"prediction": y_pred,"probability class": y_test}
+d = {"prediction": y_pred,"probability class 0": y_prob[:, 0], "probability class 1": y_prob[:, 1]}
 df_predictions = pd.DataFrame(d)
 
 # saves predictions as a csv file.
-df_predictions.to_csv("/Users/philipdecanesie/Library/CloudStorage/OneDrive-Personal/School-ITHS/Projects/Machine-learning-Philip-de-Canesie/Labb/model/prediction.csv", index= False)
+df_predictions.to_csv("Labb/model/prediction.csv", index= False)
